@@ -1,0 +1,18 @@
+matrix:
+  include:
+    - language: rust
+      rust:
+        - stable
+
+    - language: ruby
+      rvm:
+        - 2.6
+        - jruby
+        - truffleruby
+
+    - language: go
+      go:
+        - 1.x
+        - "1.10"
+        - 1.11.x
+        - master
