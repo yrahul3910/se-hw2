@@ -69,9 +69,9 @@ def print_board(m, name, generation)
   m.each {|row| row.each {|val| print "#{val == 1 ? '#' : '.'} "}; puts}
 end
 
-game_of_life "blinker", 3, 2, [[1,0],[1,1],[1,2]]
-game_of_life "glider", 4, 4, [[1,0],[2,1],[0,2],[1,2],[2,2]]
-game_of_life "random", 5, 10
+# game_of_life "blinker", 3, 2, [[1,0],[1,1],[1,2]]
+# game_of_life "glider", 4, 4, [[1,0],[2,1],[0,2],[1,2],[2,2]]
+# game_of_life "random", 5, 10
 game_of_life "small", 6, 10
 game_of_life "medium", 12, 20
 game_of_life "large", 18, 30
