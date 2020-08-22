@@ -1,6 +1,5 @@
 use std::collections::HashMap;
 use std::collections::HashSet;
-use rand::Rng;
  
 type Cell = (i32, i32);
 type Colony = HashSet<Cell>;
@@ -72,4 +71,40 @@ fn main() {
     }
     life(arr, 100, 50, 20);
  
+}
+
+#[cfg(test)]
+mod tests
+{
+    use crate::neighbours;
+    use crate::generation;
+    use crate::Colony;
+
+    #[test]
+    fn basic()
+    {
+        assert_eq!(2 + 2, 4);
+    }
+
+    #[test]
+    fn test_neighbors()
+    {
+        assert_eq!(neighbours(&(4, 3)), vec![
+                   (3, 2), (4, 2), (5, 2),
+                   (3, 3),         (5, 3),
+                   (3, 4), (4, 4), (5, 4)
+        ])
+    }
+
+    #[test]
+    fn test_blinker()
+    {
+        let map: Vec<(i32, i32)> = vec![(2, 1), (2, 2), (2, 3)];
+        let col: Colony = map.into_iter().collect();
+        let mut col_fin: Colony = vec![(2, 1), (2, 2), (2, 3)].into_iter().collect();
+        col_fin = generation(col_fin);
+        col_fin = generation(col_fin);
+
+        assert_eq!(col.is_disjoint(&col_fin), false);
+    }
 }

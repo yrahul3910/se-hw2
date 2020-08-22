@@ -13,3 +13,23 @@
 
 Rust, Go, Ruby version of - Game of life
 
+## Rust
+
+### Installation
+Install Rust:
+```{sh}
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+
+### Building and testing
+Run the below from `Rust/game_of_life/`.
+
+Then, build the code:
+```{sh}
+cargo build
+```
+
+To run the test suite:
+```{sh}
+cargo test
+```
