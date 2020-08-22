@@ -3,6 +3,8 @@ matrix:
     - language: rust
       rust:
         - stable
+      script:
+        - cd Rust/game_of_life && cargo test
 
     - language: ruby
       rvm:
