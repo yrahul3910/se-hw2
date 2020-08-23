@@ -113,7 +113,7 @@ mod tests
     {
         let map: Vec<(i32, i32)> = vec![(1, 2), (1, 3), (2, 1), (2, 4), (3, 2), (3, 3)];
         let col: Colony = map.into_iter().collect();
-        let mut col_fin: Colony = vec![(1, 2), (1, 3), (2, 1), (2, 4), (3, 2), (3, 3)];
+        let mut col_fin: Colony = vec![(1, 2), (1, 3), (2, 1), (2, 4), (3, 2), (3, 3)].into_iter().collect();
         col_fin = generation(col_fin);
 
         assert_eq!(col.is_disjoint(&col_fin), false);
