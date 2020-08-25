@@ -18,3 +18,5 @@ matrix:
         - "1.10"
         - 1.11.x
         - master
+      script:
+        - cd GO/game_of_life/src && go run GOL.go
