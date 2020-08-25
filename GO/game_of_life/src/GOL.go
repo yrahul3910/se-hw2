@@ -20,6 +20,8 @@ func NewField(w, h int) Field { //initialize the matrix without fill in value
 	return Field{s: s, w: w, h: h}
 }
 
+
+
 func (f Field) Set(x, y int, b bool) { //set bool in f at y x to b
 	f.s[y][x] = b
 }
