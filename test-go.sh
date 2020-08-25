@@ -1,0 +1,1 @@
+cd GO/game_of_life/src && go run GOL.go
