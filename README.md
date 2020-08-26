@@ -66,3 +66,7 @@ Run the below from `Ruby/game_of_life/test`.
 ```{sh}
 ruby unittest.rb
 ```
+Or in the se-HW2 folder run(where the rakefile located):
+```{sh}
+rake
+```
