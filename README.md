@@ -49,3 +49,20 @@ Run the below from `GO/game_of_life/src`.
 ```{sh}
 go run GOL.go 
 ```
+### Installation
+Install Ruby:
+
+For Debian or Ubuntu:
+```{sh}
+$ sudo apt-get install ruby-full
+```
+For Homebrew (macOS)
+
+```{sh}
+$ brew install ruby
+```
+### Building and testing
+Run the below from `Ruby/game_of_life/test`.
+```{sh}
+ruby unittest.rb
+```
