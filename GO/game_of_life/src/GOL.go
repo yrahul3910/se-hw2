@@ -45,7 +45,7 @@ func (f Field) State(x, y int) bool {
 	for x < 0 {
 		x += f.w
 	}
-	return !f.s[y%f.h][x%f.w]
+	return f.s[y%f.h][x%f.w]
 }
 
 type Life struct {

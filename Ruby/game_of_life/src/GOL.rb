@@ -60,7 +60,7 @@ def fate(board, i, j, n)
 end
 
 def barren?(board, n)
-  n.times {|i| n.times {|j| return false if board[i][j] == 1}}
+  n.times {|i| n.times {|j| return false if board[i][j] == 0}}
   true
 end
 
