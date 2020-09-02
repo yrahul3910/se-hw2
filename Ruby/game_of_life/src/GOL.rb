@@ -17,7 +17,7 @@ def game_of_life(name, size, generations, initial_life=nil)
 end
 
 def new_board(n)
-  Array.new(n) {Array.new(n, 0)}
+  Array.new(n) {Array.new(0, n)}
 end
 
 def seed(board, n, points=nil)
@@ -28,10 +28,10 @@ def seed(board, n, points=nil)
     x = 0
     if n < 5
         x = 10
-    elsif n < 10
+    elsif n < 7
         x = 20
-    elsif n < 20
-        x = 50
+    elsif n < 9
+        x = 30
     else
         x = 100
     end
