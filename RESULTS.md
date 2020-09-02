@@ -40,10 +40,12 @@
 * Most subjects had trouble using the editors in the container (vim, emacs, and nano were provided). One subject used online IDEs, and used the container to run tests.
 * Most subjects used the Internet to read documentation through standard, direct Google queries (e.g., "Rust `Vec` docs").
 * Most subjects only finished one language; a few started on a second one, and one subject nearly finished the second language.
-* Most subjects did not appear to have prior experience in any of the languages used; however, it seems universal from the reactions of the subjects that they had difficulty understanding the Rust syntax. In contrast, Ruby syntax seemed easier for subjects. Many subjects did not attempt to debug the Go code.
+* Most subjects did not appear to have prior experience in any of the languages used; however, it seems universal from the reactions of the subjects that they had difficulty understanding the Rust syntax. In contrast, Ruby syntax seemed easier for subjects. Many subjects who started with rust did not attempt to debug the Go code.
+* All subjects starts with GO successfully identified all the bugs in GO.
+* The test cases the subjects are given made some differences. Ruby test cases switch between different size of field, which did not seems help the subjects a lot. Rust test cases construct the most basic recursion pattern in GOL, which gave subject a intial sense about how the bug distort the GOL rules and logic. GO test cases are unit test for every basic function used in the GOL, which help subjects identify the root casue of the bug.
 
 # Conclusions
-
+https://github.com/JialinC/se-hw2/blob/master/github-mining/Result%20analysis.ipynb
 * Based on user reactions, a fairly universal answer emerges: Rust is harder to debug than Ruby.
     * A hypothesis for this is that Rust is intended to be a type-safe version C, and is used by Mozilla for low-level code. Ruby, on the other hand, has syntax closer to Python, and is used in higher-level code, such as HomeBrew recipes for macOS.
 * Most subjects were clearly unfamiliar with Docker and terminal editors, and did not know some vim commands, such as showing line numbers. 
@@ -73,4 +75,9 @@
 
 * We did not have a pre-written set of guidelines on taking notes, so they were less effective than they could have been.
 * We did not have a quiz prior to the test asking about the experience. We also did not have a post-test quiz. We figured we'd wing them. We never actually got around to it. What do they say about walking before using your wings?
+
+## Bugs
+* We did not introduce the same or similar bugs into 3 language. We argue that if we introduce similar bugs, then the subjects can leran about what kind of bugs to look for from their debuging experience of the 1st language and apply what they just learnt in their 2nd and 3rd language. We think this will distort the results.
+* The test cases we give all subjects make big differences in their degub result. The more low level details about the bug our test cases can provide, the faster the subjects can pin point the bug and potentially fix them.
+* Bug type matters. In this setting, we have high level constrains, whcih are the rules of the GOL itself. We argue that if someone introduce bugs mainly focus on distorting the logic of GOL rules, then it is hard(or unreasonable) to draw a concludsion about the property of the language. For example, if someone change the resurrection requirement from 3 neighbor cells to 4 neighbors, then what you can say about the language itself? We think the bugs should be carefully designed to reflect the feature of the language.
 
