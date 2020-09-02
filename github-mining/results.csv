@@ -1,0 +1,7 @@
+Subject,num_repos,total_stars,total_issues,max_issues,max_stars,total_pr,max_pr,num_rust,num_ruby,num_go,num_java,num_c,num_cpp,num_fork_and_mod,num_completed,time_to_first_complete,num_causes_found
+y380445,25,1,1,1,1,13,9,1,2,1,7,4,1,1,1,24,2
+y286662,3,0,0,0,0,0,0,0,1,0,0,0,0,0,0,30,1
+y869397,30,0,33,9,1,42,12,0,1,1,3,0,1,0,1,17,1
+y361339,2,0,0,0,0,0,0,0,1,0,0,1,1,0,0,30,0
+y288358,25,1,0,0,1,0,0,0,3,1,13,1,1,3,2,15,3
+y840401,4,0,0,0,0,0,0,0,1,0,0,0,0,1,2,10,2

@@ -51,8 +51,8 @@ def fate(board, i, j, n)
   i1 = [0, i-1].max; i2 = [i+1, n-1].min
   j1 = [0, j-1].max; j2 = [j+1, n-1].min
   sum = 0
-  for ii in (i1..i2)
-    for jj in (j1..j2)
+  for ii in (i2..i1)
+    for jj in (j2..j1)
       sum += board[ii][jj] if not (ii == i and jj == j)
     end
   end
@@ -60,7 +60,7 @@ def fate(board, i, j, n)
 end
 
 def barren?(board, n)
-  n.times {|i| n.times {|j| return false if board[i][j] == 1}}
+  n.times {|i| n.times {|j| return false if board[i][j] == 0}}
   true
 end
 

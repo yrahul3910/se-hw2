@@ -23,7 +23,7 @@ func NewField(w, h int) Field { //initialize the matrix without fill in value
 
 
 func (f Field) Set(x, y int, b bool) { //set bool in f at y x to b
-	f.s[y][x] = !b
+	f.s[y][x] = b
 }
 
 func (f Field) Next(x, y int) bool {
@@ -35,7 +35,7 @@ func (f Field) Next(x, y int) bool {
 			}
 		}
 	}
-	return on == 3 || on == 2 && f.State(x, y) //next gen of life
+	return on == 3 || (on == 2 && f.State(x, y)) //next gen of life
 }
 
 func (f Field) State(x, y int) bool {
@@ -45,7 +45,7 @@ func (f Field) State(x, y int) bool {
 	for x < 0 {
 		x += f.w
 	}
-	return !f.s[y%f.h][x%f.w]
+	return f.s[y%f.h][x%f.w]
 }
 
 type Life struct {

@@ -1,17 +1,17 @@
 const { Octokit } = require("@octokit/core");
-const octokit = new Octokit({ auth: `20f3225869549c231e065983a1a6a28943695436` });
+const octokit = new Octokit({ auth: "c0364bbf1afdd771b0ae1486e78cd1036d7c7402" });
 
 (async () => {
 	let results = await octokit.request('GET /users/{owner}/repos',
 	{
-  		owner: 'yrahul3910',
+  		owner: 'roadhog666',
 	});
 	results = results["data"];
 	let repos = results.map(x => x.name)
 	let count = 0;
 	for (const repo of repos) {
 		let result = await octokit.request('GET /repos/{owner}/{repo}/issues', {
-			owner: 'yrahul3910',
+			owner: 'roadhog666',
 			repo
         });
         result = result["data"];

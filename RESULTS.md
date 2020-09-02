@@ -47,7 +47,15 @@
 * Based on user reactions, a fairly universal answer emerges: Rust is harder to debug than Ruby.
     * A hypothesis for this is that Rust is intended to be a type-safe version C, and is used by Mozilla for low-level code. Ruby, on the other hand, has syntax closer to Python, and is used in higher-level code, such as HomeBrew recipes for macOS.
 * Most subjects were clearly unfamiliar with Docker and terminal editors, and did not know some vim commands, such as showing line numbers. 
+* Based on our data mined from GitHub, we see evidence (using Spearman's correlation coefficient) that people who have used Java in the past would use Go (r = 0.93, p = 0.006) and Ruby (r = 0.9, p = 0.015) in the future. There is no evidence of correlation between C/C++ with any of the languages we tested (p > 0.05).
+* We found no correlation between the number of repositories in any of the languages (C, C++, Java, Ruby, Rust, Go) and the time taken to find the first bug.
+* There is no evidence that any of the variables collected have any correlation with whether or not participants find a bug (p > 0.05 using the point biserial r correlation test).
+* We found strong evidence (Spearman r = 0.95, p = 0.003) that the number of repositories that the subject has forked AND modified (i.e., pushed commits to their forked copy) predicts for the number of issues found (whether or not they were fixed--some subjects found bugs but either ran out of time or did not understand the syntax well enough to fix it).
+* Because we only had 6 samples (9 total - 2 declined - 1 went wrong), we could not obtain reliable regression results as we had hoped. However, we did confirm two hypotheses that we had prior to running the linear regression models:
+ > The number of repos a subject has forked AND modified has a significant impact on the number of languages completely debugged (95% C.I. = [0.255, 1.381]) and the number of bugs found but not fixed (95% C.I = [0.521, 1.843]).
+* However, contrary to our prior beliefs, the number of repos a subject has forked and modified does not have a significant impact on the time taken to find the first bug (95% C.I. = [-9.879, 24.242])
 * Lattes are actually really good.
+
 
 # Threats to Validity (Failures)
 
