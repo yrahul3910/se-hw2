@@ -14,6 +14,7 @@
 * The subject is given a chance to explore the code and come up with a plan to debug before the timer starts.
 * The subject is told that (s)he is free to debug in any order, and as many or few languages as preferred.
 * During the session, the proctors take notes on significant events, such as finding a bug, incorrectly labeling a bug, and time taken to find and fix a bug.
+* During the session, subjects are free to ask questions about the code structre, test cases constrution, bug types, and language related questions.
 * The subject is given a token at the end of the session.
 * The languages used were Rust, Ruby, Go
 
@@ -26,7 +27,7 @@
 # Materials
 
 * Docker
-* Compilers for Rust, Ruby, Swift
+* Compilers for Rust, Ruby, GO
 * Zoom
 * Slack
 
