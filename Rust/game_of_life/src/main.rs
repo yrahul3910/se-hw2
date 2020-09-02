@@ -27,7 +27,7 @@ fn neighbours(&(x,y): &Cell) -> Vec<Cell> {
 fn neighbour_counts(col: &Colony) -> HashMap<Cell, i32> {
     let mut ncnts = HashMap::new();
     for cell in col.iter().flat_map(neighbours) {
-        *ncnts.entry(cell).or_insert(1) += 1;
+        *ncnts.entry(cell).or_insert(0) += 1;
     }
     ncnts
 }
@@ -37,8 +37,8 @@ fn generation(col: Colony) -> Colony {
         .into_iter()
         .filter_map(|(cell, cnt)|
             match (cnt, col.contains(&cell)) {
-                (1, true) |
-                (2, ..) => Some(cell),
+                (2, true) |
+                (3, ..) => Some(cell),
                 _ => None
         })
         .collect()
