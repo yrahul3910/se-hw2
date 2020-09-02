@@ -33,3 +33,40 @@ To run the test suite:
 ```{sh}
 cargo test
 ```
+
+### Installation
+Install GO:
+```{sh}
+curl -O https://golang.org/dl/go1.15.linux-amd64.tar.gz
+tar -xvf go1.15.linux-amd64.tar.gz
+sudo chown -R root:root ./go
+sudo mv go /usr/local
+export PATH=$PATH:/usr/local/go/bin
+```
+
+### Building and testing
+Run the below from `GO/game_of_life/src`.
+```{sh}
+go run GOL.go 
+```
+### Installation
+Install Ruby:
+
+For Debian or Ubuntu:
+```{sh}
+$ sudo apt-get install ruby-full
+```
+For Homebrew (macOS)
+
+```{sh}
+$ brew install ruby
+```
+### Building and testing
+Run the below from `Ruby/game_of_life/test`.
+```{sh}
+ruby unittest.rb
+```
+Or in the se-HW2 folder run(where the rakefile located):
+```{sh}
+rake
+```

@@ -13,4 +13,12 @@ class GOLTest < Test::Unit::TestCase
   def test_large
     game_of_life "large", 8, 30
   end
+
+  def test_blinker
+    game_of_life "blinker", 3, 2, [[1,0],[1,1],[1,2]]
+  end
+
+  def test_glider
+    game_of_life "glider", 4, 4, [[1,0],[2,1],[0,2],[1,2],[2,2]]
+  end
 end

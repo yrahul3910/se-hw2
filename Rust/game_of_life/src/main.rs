@@ -27,7 +27,7 @@ fn neighbours(&(x,y): &Cell) -> Vec<Cell> {
 fn neighbour_counts(col: &Colony) -> HashMap<Cell, i32> {
     let mut ncnts = HashMap::new();
     for cell in col.iter().flat_map(neighbours) {
-        *ncnts.entry(cell).or_insert(0) += 1;
+        *ncnts.entry(cell).or_insert(1) += 1;
     }
     ncnts
 }
@@ -37,8 +37,8 @@ fn generation(col: Colony) -> Colony {
         .into_iter()
         .filter_map(|(cell, cnt)|
             match (cnt, col.contains(&cell)) {
-                (2, true) |
-                (3, ..) => Some(cell),
+                (1, true) |
+                (2, ..) => Some(cell),
                 _ => None
         })
         .collect()
@@ -103,6 +103,17 @@ mod tests
         let col: Colony = map.into_iter().collect();
         let mut col_fin: Colony = vec![(2, 1), (2, 2), (2, 3)].into_iter().collect();
         col_fin = generation(col_fin);
+        col_fin = generation(col_fin);
+
+        assert_eq!(col.is_disjoint(&col_fin), false);
+    }
+
+    #[test]
+    fn test_beehive()
+    {
+        let map: Vec<(i32, i32)> = vec![(1, 2), (1, 3), (2, 1), (2, 4), (3, 2), (3, 3)];
+        let col: Colony = map.into_iter().collect();
+        let mut col_fin: Colony = vec![(1, 2), (1, 3), (2, 1), (2, 4), (3, 2), (3, 3)].into_iter().collect();
         col_fin = generation(col_fin);
 
         assert_eq!(col.is_disjoint(&col_fin), false);
