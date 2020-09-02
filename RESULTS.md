@@ -1,14 +1,13 @@
 # Methods
 * Docker to have things set up
-* Custom timer program
-* Test correct fix: write an unbugged function
+* Manually time, or use simple timer program
+* Test correct fix: write an unbugged function / write test cases
 * Prevent user from accessing Rosetta Code
-* Languages: Rust, Ruby, Go/Swift
+* Languages: Rust, Ruby, Go
 
 # Materials
 * Docker
 * Compilers for Rust, Ruby, Swift
-* Timer program: Swift / Python
 * Zoom
 
 # Observations
