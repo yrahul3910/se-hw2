@@ -45,7 +45,7 @@
 * The test cases the subjects are given made some differences. Ruby test cases switch between different size of field, which did not seems help the subjects a lot. Rust test cases construct the most basic recursion pattern in GOL, which gave subject a intial sense about how the bug distort the GOL rules and logic. GO test cases are unit test for every basic function used in the GOL, which help subjects identify the root casue of the bug.
 
 # Conclusions
-https://github.com/JialinC/se-hw2/blob/master/github-mining/Result%20analysis.ipynb
+https://github.com/yrahul3910/se-hw2/blob/master/github-mining/Result%20analysis.ipynb
 * Based on user reactions, a fairly universal answer emerges: Rust is harder to debug than Ruby.
     * A hypothesis for this is that Rust is intended to be a type-safe version C, and is used by Mozilla for low-level code. Ruby, on the other hand, has syntax closer to Python, and is used in higher-level code, such as HomeBrew recipes for macOS.
 * Most subjects were clearly unfamiliar with Docker and terminal editors, and did not know some vim commands, such as showing line numbers. 
