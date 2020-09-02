@@ -1,7 +1,7 @@
 const {Octokit} = require("@octokit/core");
-const octokit = new Octokit({ auth: `74dddb28da909c7e46f90444cf3002cf18f884c3` });
+const octokit = new Octokit({ auth: "c0364bbf1afdd771b0ae1486e78cd1036d7c7402" });
 
-var owner = 'fastlane';
+var owner = 'roadhog666';
 
 (async () => {
 	let results = await octokit.request('GET /users/{owner}/repos',

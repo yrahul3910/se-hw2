@@ -1,10 +1,10 @@
 const {Octokit} = require("@octokit/core");
-const octokit = new Octokit({ auth: `2400d19e5be465d4f8834e8adad71a1b60a74188` });
+const octokit = new Octokit({ auth: "c0364bbf1afdd771b0ae1486e78cd1036d7c7402" });
 
 (async () => {
 	let results = await octokit.request('GET /users/{owner}/repos', 
 	{
-  		owner: 'yrahul3910',
+  		owner: 'roadhog666',
 		type: 'all'
 	});
 
@@ -14,7 +14,7 @@ const octokit = new Octokit({ auth: `2400d19e5be465d4f8834e8adad71a1b60a74188` }
 		if (repo.fork) {
 			try {
 				let forks = await octokit.request('GET /repos/{owner}/{repo}/events', {
-					owner: 'yrahul3910',
+					owner: 'roadhog666',
 					repo: repo.name
 				});
 
